@@ -6,14 +6,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<Integer> list = prepareList();
-        SortMethod sort = new BubbleSort(list);
+        SortMethod sort = new BubbleSort(prepareList());
         sort.printList();
         sort.run();
         sort.printList();
 
-        list = prepareList();
-        sort = new QuickSort(list);
+        sort = new QuickSort(prepareList());
         sort.printList();
         sort.run();
         sort.printList();
