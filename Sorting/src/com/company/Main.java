@@ -1,30 +1,22 @@
 package com.company;
 
 import java.util.ArrayList;
-import java.io.PrintStream;
-
-import static java.lang.System.out;
 
 public class Main {
 
     public static void main(String[] args) {
-        PrintStream stream = new PrintStream(out);
 
         ArrayList<Integer> list = prepareList();
         SortMethod sort = new BubbleSort(list);
-        stream.println("Bubblesort");
-        stream.format(list.toString());
+        sort.printList();
         sort.run();
-        stream.format(list.toString());
-        stream.println("");
+        sort.printList();
 
         list = prepareList();
         sort = new QuickSort(list);
-        stream.println("Quicksort");
-        stream.format(list.toString());
+        sort.printList();
         sort.run();
-        stream.format(list.toString());
-        stream.println("");
+        sort.printList();
     }
 
     private static ArrayList<Integer> prepareList() {
