@@ -11,7 +11,13 @@ public class Main {
         apples.add(new Apple("red", 120));
         apples.add(new Apple("red", 220));
 
-        List<Apple> filteredApples = filterApples(apples, new AppleColorPredicate());
+        List<Apple> filteredApples = filterApples(apples, new AppleWeightPredicate());
+        System.out.println("After filtering by weight");
+        for(Apple apple: filteredApples) {
+            System.out.println(apple);
+        }
+        System.out.println("After filtering by color");
+        filteredApples = filterApples(apples, (Apple apple) -> "red".equals(apple.getColor()));
         for(Apple apple: filteredApples) {
             System.out.println(apple);
         }
