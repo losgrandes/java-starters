@@ -1,6 +1,9 @@
 package com.company;
 
 public class Apple {
+    private final String color;
+    private final int grams;
+
     public Apple(String color, int grams) {
         this.color = color;
         this.grams = grams;
@@ -17,7 +20,4 @@ public class Apple {
     public String toString() {
         return "Color: "+getColor()+", Grams: "+getGrams();
     }
-
-    private final String color;
-    private final int grams;
 }
